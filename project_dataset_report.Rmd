@@ -1,0 +1,56 @@
+---
+title: "Project report"
+author: "Yijing Zhu"
+date: "9/22/2022"
+output: html_document
+params:
+  production: TRUE
+  cutpoint: 50
+---
+
+```{r, set-chunk-opts, echo = FALSE, eval = params$production}
+library(knitr)
+opts_chunk$set(
+  echo = FALSE, warning = FALSE, message = FALSE
+)
+```
+
+# Introduction
+The dataset I choose is about heart failure prediction with the website link: https://www.kaggle.com/datasets/andrewmvd/heart-failure-clinical-data?resource=download. Heart failure is a common event caused by CVDs and this dataset contains 12 features that can be used to predict mortality by heart failure such as age, anaemia, diabetes, and platelets. Most cardiovascular diseases can be prevented by addressing behavioural risk factors such as tobacco use, unhealthy diet and obesity, physical inactivity and harmful use of alcohol using population-wide strategies. Based on this dataset, I am planning to calculate cardiovascular risks based on different risk factors and create a model for predicting mortality caused by Heart Failure. 
+
+```{r, load-data}
+here::i_am("project_dataset_report.Rmd")
+data <- readRDS(
+  file = here::here("output/data.rds")
+)
+```
+# Descriptive Analysis
+
+## Tabular analysis
+Characteristics of the `r nrow(data)` patients' information from the Heart Failure Prediction database are displayed
+in the table below.
+```{r, table1}
+table_one <- readRDS(
+  file = here::here("output/table_one.rds")
+)
+table_one
+```
+
+In the table above, I divide the data into two age groups. One is the group of people under the age of 50, the other is the group of people age more than 50 years. We can see that the percentages of hypertension and Anaemia are both higher in elder age group, while such difference is only statistically significant for Anaemia characteristics (p-value<0.05).
+
+## Graphical analysis
+
+```{r, plot-data}
+#| fig.align = "center",
+#| out.width = "600px"
+knitr::include_graphics(
+  here::here("output/scatterplot.png")
+)
+```
+In the above figure, x-axis is age, while y-axis is Platelets in the blood (kiloplatelets/mL). There is no substantial trend between age and platetes. We can see from the figure that the distribution of platelets values are distributed uniformly along x-axis. 
+
+
+
+
+
+
