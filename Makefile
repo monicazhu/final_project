@@ -10,3 +10,7 @@ make_figures:
 .PHONY: clean
 clean:
 	rm -f output/*.rds && rm -f report.html && rm -f output/*.png
+	
+.PHONY: install
+install:
+	Rscript -e "renv::restore(prompt = FALSE)"
