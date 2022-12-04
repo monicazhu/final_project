@@ -1,4 +1,4 @@
-report.html: project_dataset_report.Rmd code/03_render_report.R make_tables make_figures
+project_dataset_report.html: project_dataset_report.Rmd code/03_render_report.R make_tables make_figures
 	Rscript code/03_render_report.R
 
 make_tables:
@@ -9,8 +9,14 @@ make_figures:
 
 .PHONY: clean
 clean:
-	rm -f output/*.rds && rm -f report.html && rm -f output/*.png
+	rm -f output/*.rds && rm -f project_dataset_report.html && rm -f output/*.png
 	
-.PHONY: install
-install:
-	Rscript -e "renv::restore(prompt = FALSE)"
+project_image:
+	docker build -t project_image .
+	touch $@
+
+.PHONY: final_report
+final_report: 
+	docker run -v "$(pwd)/report":/project/report project_image
+	
+

@@ -6,6 +6,9 @@
 
 ## Contents of the repository
 
+
+### In `code` folder:
+
 `code/01_make_tables.R`
 
   - read dataset from a .csv file
@@ -17,10 +20,17 @@
   - load dataset
   - create graphical analysis
 
-
 `code/03_render_report.R`
 
   - renders `report.Rmd`
+  
+### In `data` folder:
+`heart_failure_clinical_records_dataset.csv`
+   - raw dataset
+   
+### In `output` folder:
+  - will 
+
 
 `project_dataset_report.Rmd`
 
@@ -31,14 +41,18 @@
   
 ------------------------------------------------------------------------  
 
-## Generate the final report
+## Build the Docker image
 
-Before generating the final report, please type `make install` in your Terminal to synchronize your package repository.
-
-Type `make` in your Terminal to generate the final report.
-
-
+Building the Docker image can be done by typing `make project_image` in your terminal.
 
 ------------------------------------------------------------------------  
+
+## Generate the final report
+
+Type `make report/project_dataset_report.html` in your Terminal to generate the final report.
+
+------------------------------------------------------------------------ 
+
+
 
 
