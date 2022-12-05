@@ -9,14 +9,14 @@ make_figures:
 
 .PHONY: clean
 clean:
-	rm -f output/*.rds && rm -f project_dataset_report.html && rm -f output/*.png
-	
+	rm -f output/*.rds && rm -f *.html && rm -f output/*.png && rm -f report/*html
+
 project_image:
 	docker build -t project_image .
 	touch $@
 
 .PHONY: final_report
 final_report: 
-	docker run -v "$(pwd)/report":/project/report project_image
+	docker run -v "$$(pwd)/report":/project/report project_image
 	
 

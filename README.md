@@ -49,7 +49,7 @@ Building the Docker image can be done by typing `make project_image` in your ter
 
 ## Generate the final report
 
-Type `make report/project_dataset_report.html` in your Terminal to generate the final report.
+Type `make final_report` in your Terminal to generate the final report.
 
 ------------------------------------------------------------------------ 
 
