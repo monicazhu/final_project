@@ -1,6 +1,6 @@
-#Final project organization and GitHub repository
+#Final project 
 
-> Organize the code for me final project and create a GitHub repository
+> Descriptions of the repository and instructions to build the image and report
 
 ------------------------------------------------------------------------
 
