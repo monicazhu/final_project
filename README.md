@@ -29,8 +29,7 @@
    - raw dataset
    
 ### In `output` folder:
-  - will 
-
+  - figures and tables will be saved here
 
 `project_dataset_report.Rmd`
 
