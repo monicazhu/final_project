@@ -17,6 +17,6 @@ project_image:
 
 .PHONY: final_report
 final_report: 
-	docker run -v "$$(pwd)/report":/project/report project_image
+	docker run -v "$$(pwd)/report":/project/report monicazhu99/project_image
 	
 

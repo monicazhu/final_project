@@ -43,7 +43,9 @@
 
 ## Build the Docker image
 
-Building the Docker image can be done by typing `make project_image` in your terminal.
+You can pull the Docker image by `docker pull monicazhu99/project_image`. The link for the image on Docker Hub is https://hub.docker.com/repository/docker/monicazhu99/project_image.
+
+Then building the Docker image can be done by typing `make project_image` in your terminal.
 
 ------------------------------------------------------------------------  
 
