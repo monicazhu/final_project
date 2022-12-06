@@ -15,6 +15,9 @@ project_image:
 	docker build -t project_image .
 	touch $@
 
+pull_image:
+	docker pull monicazhu99/project_image
+
 .PHONY: final_report
 final_report: 
 	docker run -v "$$(pwd)/report":/project/report monicazhu99/project_image

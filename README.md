@@ -40,11 +40,13 @@
   
 ------------------------------------------------------------------------  
 
-## Build the Docker image
+## Build docker image
 
-You can pull the Docker image by `docker pull monicazhu99/project_image`. The link for the image on Docker Hub is https://hub.docker.com/repository/docker/monicazhu99/project_image.
+ The link for the image on Docker Hub is https://hub.docker.com/repository/docker/monicazhu99/project_image.
 
-Then building the Docker image can be done by typing `make project_image` in your terminal.
+  - fork and clone the repository from GitHub link monicazhu/final_project
+  - navigate to project directory
+  - type `make project_image` in your terminal to build the docker image, it would take some time. Alternatively, you can also type `make pull_image` in your terminal to pull the image from DockerHub.
 
 ------------------------------------------------------------------------  
 
@@ -54,6 +56,11 @@ Type `make final_report` in your Terminal to generate the final report.
 
 ------------------------------------------------------------------------ 
 
+You can also build the final report in docker container by pulling image from Docker Hub
 
+  - pull image from the DockerHub by typing `docker pull monicazhu99/project_image`
+  - generate report by typing `docker run -it monicazhu99/project_image`
+
+My target will build appropriately on Mac/Linux-OS system.
 
 
