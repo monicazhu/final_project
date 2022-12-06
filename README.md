@@ -61,6 +61,6 @@ You can also build the final report in docker container by pulling image from Do
   - pull image from the DockerHub by typing `docker pull monicazhu99/project_image`
   - generate report by typing `docker run -it monicazhu99/project_image`
 
-My target will build appropriately on Mac/Linux-OS system.
+My target will build appropriately on Mac/Linux-OS system and windows system.
 
 
